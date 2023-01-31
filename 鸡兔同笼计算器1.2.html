@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鸡兔同笼问题计算器1.2</title>
+<style>body{text-align:center;background-color: #39c5bb;display: flow-root}</style>
+</head>
+<script>alert("欢迎您使用鸡兔同笼计算器1.2版，本程序是基于HTML编写的集轻量、免安装、免配置等多种优势于一体的网页程序")</script>
+<h1>鸡兔同笼问题计算器(1.2版)</h1>
+<h2>Developed by Devin_ng</h2>
+<p><strong>
+	鸡兔同笼是中国古代的数学名题之一，大约在1500年前《孙子算经》中就记载了这个有趣的问题，本身是从实际问题出发的。<br>
+	所以本计算器只能计算真实数据，绝不能是小数、负数形式的数据和各种离奇形式的数据形式。<br>
+	会自动判断出输入源的正确性,若错误会弹出警告窗口</strong>
+</p>
+<input type="number" placeholder="共有多少头" id="head" min="1" step="1"/><br>	
+<input type="number" placeholder="共有多少脚" id="feet" min="1" step="1"/><br><br>
+<script>
+	function Main(){
+	var head=document.getElementById('head').value,
+		feet=document.getElementById('feet').value;
+		Math.round(head)
+		Math.round(feet)
+		var x=(feet-4*head)/-2,
+		 	y=head-x;
+		if(Number.isInteger(x)&&y>=0&&x>=0){
+			if(head<0&&feet<0)
+				alert("戳啦，输入源怎么能小于0呢");
+			else
+			alert("鸡有"+x)
+			alert("兔有"+y)
+			document.write("鸡有"+x)
+			document.write("</br>")
+			document.write("兔有"+y)
+        }else
+			alert("检查一下输入的数据吧，这可不是一组实际数据哦！")
+	}
+</script>
+<br>
+<br>
+<br>
+<body>
+	<button onClick="Main()">确认</button>
+	<br>
+	<br>
+	<br>
+	<p><strong>作者联系方式：<br>devin_ng7924@qq.com<br>如果您发现了任何问题或有对本程序改进的建议，欢迎您随时联系我！</strong></p>
+</body>
+<p>©Devin_ng版权所有，未经允许禁止转载</p>
+</html>
