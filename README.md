@@ -16,6 +16,7 @@ The essence of this problem is a binary equation. If the teaching method is appr
 <br>
 ![image](https://user-images.githubusercontent.com/124018641/215729743-66aa8931-d749-4aaa-be07-0dcb74a1bac9.png)
 or
+<br>
 ![image](https://user-images.githubusercontent.com/124018641/215729813-ff27c941-fc1d-45c6-888b-0f487250889e.png)
 
 if you want know more about this old math problem, plz view on https://baike.baidu.com/item/%E9%B8%A1%E5%85%94%E5%90%8C%E7%AC%BC/5907332
