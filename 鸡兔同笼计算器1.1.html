@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鸡兔同笼问题计算器</title>
+</head>
+<h1>鸡兔同笼问题计算器</h1>
+<h2>Developed by Devin_ng</h2>
+<p>鸡兔同笼是中国古代的数学名题之一，大约在1500年前《孙子算经》中就记载了这个有趣的问题，本身是从实际问题出发的。<br>所以本计算器只能计算真实数据，绝不能是小数、负数形式的数据和各种离奇形式的数据形式，计算结果必然有问题。</p>
+<input type="number" placeholder="共有多少头" id="head"/>	
+<input type="number" placeholder="共有多少脚" id="feet"/>
+<button onClick="Main()">确认</button>
+<script>
+	function Main(){
+	var head=document.getElementById('head').value,
+		feet=document.getElementById('feet').value;
+		Math.round(head)
+		Math.round(feet)
+		var x=(feet-4*head)/-2,
+		 	y=head-x;
+		if(Number.isInteger(x)){
+			alert("鸡有"+x)
+			alert("兔有"+y)
+			document.write("鸡有"+x)
+			document.write("</br>")
+			document.write("兔有"+y)
+        }else
+			alert("检查一下输入的数据吧，这可不是一组实际数据哦！")
+	}
+</script>
+<body>
+</body>
+</html>
