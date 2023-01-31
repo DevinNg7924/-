@@ -13,6 +13,7 @@ Chicken and rabbit in the same cage is one of the famous mathematical problems i
   (It's a period of Classical Chinese, here is the translated version:
   There are several chickens and rabbits in the same cage, counting from above, with 35 heads, and counting from below, with 94 feet. Q: How many chickens and rabbits are in the cage?
 The essence of this problem is a binary equation. If the teaching method is appropriate, it can give elementary school students an initial understanding of concepts such as unknowns and equations, and exercise their ability to abstract numbers from application problems. Generally, in the fourth to sixth grade of elementary school, it is taught with unary equations and other content
+like:
 ![image](https://user-images.githubusercontent.com/124018641/215729743-66aa8931-d749-4aaa-be07-0dcb74a1bac9.png)
 or
 ![image](https://user-images.githubusercontent.com/124018641/215729813-ff27c941-fc1d-45c6-888b-0f487250889e.png)
