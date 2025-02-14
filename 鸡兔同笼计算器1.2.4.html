@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>鸡兔同笼问题计算器1.2.2</title>
+<style>
+body {
+    text-align: center;
+    background-image: url("1505391130_2978_0_960.png");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flow-root;
+}
+</style>
+<script>
+alert("欢迎您使用鸡兔同笼计算器1.2.2版，本程序是基于HTML编写的集轻量、免安装、免配置等多种优势于一体的网页程序");
+
+var phoneWidth = parseInt(window.screen.width);
+var phoneScale = phoneWidth / 640;
+var ua = navigator.userAgent;
+if (/Android (\d+\.\d+)/.test(ua)) {
+    var version = parseFloat(RegExp.\$1);
+    if (version > 2.3) {
+        document.write('<meta name="viewport" content="width=640, minimum-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi">');
+    } else {
+        document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+    }
+}
+</script>
+</head>
+<body>
+<h1>鸡兔同笼问题计算器(1.2.2版)</h1>
+<h2>Developed by Devin_ng</h2>
+<p><strong>
+    鸡兔同笼是中国古代的数学名题之一，记载于我国古代数学巨作《孙子算经》<br>
+    会自动判断出输入源的正确性并进行反馈
+</strong></p>
+<input type="number" placeholder="共有多少头" id="head" min="1" step="1" maxlength="10" 
+       onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+       oninput="if(value.length>11)value=value.slice(0,11)" style="ime-mode: disabled"/><br>    
+<input type="number" placeholder="共有多少脚" id="feet" min="1" step="1" maxlength="10" 
+       onkeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"
+       oninput="if(value.length>11)value=value.slice(0,11)" style="ime-mode: disabled"/><br>    
+<button onClick="Main()">确认</button>
+<div id="result"></div>
+<h3><strong>作者联系方式：<br>devin_ng7924@qq.com<br>如果您发现了任何问题或有对本程序改进的建议，欢迎您随时联系我！</strong></h3>
+<h3>©Devin_ng版权所有，未经允许禁止转载</h3>
+<audio id="audio" src="ピノキオピー; 鏡音リン; 初音ミク - ねぇねぇねぇ。.mp3" style="opacity:0" preload="auto" controls loop hidden="false"></audio>  
+
+<script>
+function Main() {
+    var head = Number(document.getElementById('head').value),
+        feet = Number(document.getElementById('feet').value);
+    
+    head = Math.round(head);
+    feet = Math.round(feet);
+    
+    var x = (feet - 4 * head) / -2,
+        y = head - x;
+    
+    if (Number.isInteger(x) && y >= 0 && x >= 0) {
+        if (head >= 10000 && feet >= 10000)
+            alert("输入源太大了，被填满了呢❤");
+        else {
+            alert("鸡有" + x);
+            alert("兔有" + y);
+            document.getElementById('result').innerHTML = "鸡有" + x + "<br>兔有" + y;
+        }
+    } else {
+        alert("检查一下输入的数据吧，这可不是一组实际数据哦！");
+    }
+}
+</script>
+</body>
+</html>
